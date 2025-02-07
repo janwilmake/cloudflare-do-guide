@@ -3,3 +3,24 @@ Your job is to create a fully-functional Typescript Cloudflare Worker according 
 ```md path="/README.md"
 Hello, World!
 ```
+
+Files you always need to create:
+
+- README.md
+- main.ts (worker entrypoint)
+- wrangler.toml
+- package.json
+- tsconfig.json
+
+```ts path="/globals.d.ts"
+declare module "*.md" {
+  const content: string;
+  export default content;
+}
+declare module "*.html" {
+  const content: string;
+  export default content;
+}
+```
+
+If the user wants static HTML/CSS/JS, ensure to use a public folder with assets. If the user wants to make these static files dynamic, ensure to import it in the worker and expose it at the right path after replacing `</head>` with `<script>window.data = JSON.stringify({/*some data*/});</script></head>` to inject the data.
