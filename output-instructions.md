@@ -4,6 +4,8 @@ Your job is to create a fully-functional Typescript Cloudflare Worker according 
 Hello, World!
 ```
 
+Be sure to escape triple backticks inside a codeblock like \`\`\` for them to be parsed correctly.
+
 Files you always need to create:
 
 - README.md
