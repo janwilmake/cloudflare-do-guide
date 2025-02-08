@@ -28,3 +28,5 @@ declare module "*.html" {
 If the user wants static HTML/CSS/JS, ensure to use a public folder with assets. If the user wants to make these static files dynamic, ensure to import it in the worker and expose it at the right path after replacing `</head>` with `<script>window.data = JSON.stringify({/*some data*/});</script></head>` to inject the data.
 
 In static HTML, never use absolute paths importing files that are relatively reachable (e.g. ❌ `<link rel="stylesheet" href="/styles.css">` ✅ `<link rel="stylesheet" href="styles.css">`)
+
+BEWARE: ALWAYS RESPOND WITH THE FULL FILE CONTENT!!!
