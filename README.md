@@ -6,6 +6,8 @@ Below are the main features of Durable Objects along with code examples.
 
 ---
 
+---
+
 ## 1. Global Uniqueness & Actor Model
 
 Every Durable Object is uniquely identified by a **DurableObjectId** derived from a name or generated randomly. This ensures that all requests for the same ID are routed to the same object instance (i.e. the same actor). Because each object runs on a single thread, you avoid many of the concurrency issues common in distributed systems.
